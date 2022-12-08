@@ -1,5 +1,6 @@
 const iiifBase = (sigil, page, numbered) => [
-  'http://130.92.41.10:1024/rapp/',
+  'http://130.92.252.118:1026/rapp/',
+  //'http://130.92.41.10:1024/rapp/',
   `${sigil.toLowerCase()}${page}${numbered ? '_num' : ''}.j2k`
 ].join('')
 
