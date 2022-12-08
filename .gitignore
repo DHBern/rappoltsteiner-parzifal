@@ -1,0 +1,38 @@
+
+config/
+htdocs/
+node_modules/
+src/config/secrets.json
+src/tustep/*.xml
+src/tustep/logfile
+provisioning/file-share
+provisioning/roles/*.*
+provisioning/ubuntu-*-cloudimg-console.log
+public/image/
+public/quire-icons/
+.vagrant/
+*.retry
+
+.DS_Store
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+
+# Files that are created during the build process
+src/data/metadata.json
+src/data/transcript.json
