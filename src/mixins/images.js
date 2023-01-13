@@ -1,5 +1,6 @@
 const iiifBase = (sigil, page, numbered) => [
-  'http://130.92.252.118:1026/rapp/',
+  'https://www.parzival.unibe.ch/sipi/rapp/', // works for info json; exchange with proper iiif-url
+  // if there is a proper iiif-server around
   `${sigil.toLowerCase()}${page}${numbered ? '_num' : ''}.j2k`
 ].join('')
 
@@ -14,6 +15,7 @@ export default {
     },
 
     figure (sigil, page, numbered = false) {
+
       return `${iiifBase(sigil, page, numbered)}/full/800,/0/default.jpg`
     }
 

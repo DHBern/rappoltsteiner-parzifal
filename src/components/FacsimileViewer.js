@@ -49,14 +49,46 @@ export default {
         }
       }
 
+      const fetchRetry = (url, options = {}, retries) =>
+        fetch(url, options)
+          .then(res => {
+            if (res.ok) {
+              return res.json()
+            }
+            if (retries > 0) {
+              return fetchRetry(url, options, retries - 1)
+            }
+            throw new Error(res.status)
+          })
+          .catch(error => {
+            console.error(error.message);
+          })
+
       pageList.forEach((page, pi) => {
         if (page !== undefined) {
-          this.osd.addTiledImage({
-            tileSource: this.iiif(manuscript, page, numbered),
-            width,
-            x: (pi * width),
-            success
-          })
+          // get the url for the image info
+          const url = this.iiif(manuscript, page, numbered);
+          // Start of hackish solution to bypass opening ports for sipi. In a working environment/iiif-server
+          // remove the following fetch then's and pass above url directly to addTiledImage()
+          // fetch the json
+          fetchRetry(url, {}, 2).then(response => {
+            return response.json();
+          }).then(data => {
+            // replace hackish the domains
+            data = JSON.stringify(data)
+              .replaceAll('http://localhost:1026', 'https://www.parzival.unibe.ch/sipi');
+            // build a new JSON as Blob and make it available by a url in the DOM
+            const newJson = new Blob([data], {type: "application/json"})
+            return URL.createObjectURL(newJson);
+          }).then( url => {
+              // pass the url to openseadragons TileImage
+              this.osd.addTiledImage({
+                tileSource: url,
+                width,
+                x: (pi * width),
+                success
+              });
+          });
         }
       })
     },
