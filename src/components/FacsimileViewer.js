@@ -72,7 +72,7 @@ export default {
           // remove the following fetch then's and pass above url directly to addTiledImage()
           // fetch the json
           fetchRetry(url, {}, 2).then(response => {
-            return response.json();
+            return response
           }).then(data => {
             // replace hackish the domains
             data = JSON.stringify(data)
