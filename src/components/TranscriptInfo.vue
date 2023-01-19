@@ -18,7 +18,7 @@
               Ausgabe und in Probleme der ›Parzival‹-Interpretation von Bernd Schirok (de
               Gruyter Texte), Berlin/New York 2003.</p>
 
-            <p>LDie Verszählung folgt beim <b>›Nuwen Parzifal‹ (NP)</b> der Ausgabe: Parzifal von Claus
+            <p>Die Verszählung folgt beim <b>›Nuwen Parzifal‹ (NP)</b> der Ausgabe: Parzifal von Claus
               Wisse und Philipp Colin (1331–1336). Eine Ergänzung der Dichtung Wolframs von
               Eschenbach. Zum ersten Male hrsg. von Karl Schorbach (Elsässische
               Litteraturdenkmäler aus dem XIV–XVII. Jahrhundert 5), Straßburg/London 1888
@@ -27,6 +27,9 @@
             <p>Die Verszählung des Prologus nach der ›Élucidation‹, dt., wird fortlaufend mit
               voranstehendem 'Pr' nummeriert, jene des Epilogs zum ›Rappoltsteiner Parzifal‹ mit
               voranstehendem 'Ep'.</p>
+
+            <p>Die Ergänzung [0] am Ende einer Versnummer bezeichnet Kustoden, Reklamanten und Notizen in den
+              Handschriften (kursiv markiert).</p>
 
             <p>Die Ergänzung [01][01] am Ende einer Versnummer bezeichnet eine Anweisung an
               den Rubrikator (kursiv markiert, betrifft nur V').</p>
@@ -39,6 +42,7 @@
 
             <p>Die Ergänzung [1] am Ende einer Versnummer bezeichnet einen Plusvers oder einen
               doppelt abgeschriebenen Vers.</p>
+
             <p>Editorische Erläuterungen stehen kursiviert zwischen senkrechten Strichen und
               werden aus technischen Gründen durch Versziffern eingeleitet.</p>
 
