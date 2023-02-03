@@ -71,7 +71,7 @@ export default {
           // Start of hackish solution to bypass opening ports for sipi. In a working environment/iiif-server
           // remove the following fetch then's and pass above url directly to addTiledImage()
           // fetch the json
-          fetchRetry(url, {}, 2).then(response => {
+          fetchRetry(url, {mode: 'no-cors'}, 2).then(response => {
             return response
           }).then(data => {
             // replace hackish the domains

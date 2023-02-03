@@ -1,5 +1,5 @@
 const iiifBase = (sigil, page, numbered) => [
-  'https://www.parzival.unibe.ch/sipi/rapp/', // works for info json; exchange with proper iiif-url
+  'https://parzival.unibe.ch/sipi/rapp/', // works for info json; exchange with proper iiif-url
   // if there is a proper iiif-server around
   `${sigil.toLowerCase()}${page}${numbered ? '_num' : ''}.j2k`
 ].join('')
