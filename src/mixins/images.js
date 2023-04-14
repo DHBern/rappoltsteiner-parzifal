@@ -13,11 +13,5 @@ export default {
     thumb (sigil, page, numbered = false) {
       return `${iiifBase(sigil, page, numbered)}/full/300,/0/default.jpg`
     },
-
-    figure (sigil, page, numbered = false) {
-
-      return `${iiifBase(sigil, page, numbered)}/full/800,/0/default.jpg`
-    }
-
   }
 }
