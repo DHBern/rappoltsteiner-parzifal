@@ -1,6 +1,7 @@
 import debounce from 'lodash.debounce'
 import OpenSeadragon from 'openseadragon'
 
+const iiifBase = 'https://iiif.ub.unibe.ch/image/v2.1/parzival/';
 const viewportKey = 'parzival.facsimileViewport'
 const defaultViewport = { x: 0, y: 0, width: 1, height: 0.5 }
 const storeViewport = (viewport) => {
@@ -14,6 +15,7 @@ const storedViewport = () => {
     return defaultViewport
   }
 }
+
 export default {
   name: 'facsimile-viewer',
   props: ['manuscript', 'pages', 'numbered'],
@@ -51,28 +53,19 @@ export default {
 
       pageList.forEach((page, pi) => {
         if (page !== undefined) {
-          this.fetchImagesData()
-            .then(imagesData => {
-              const fileName = `${manuscript.toLowerCase()}${page}${numbered ? '_num' : ''}.j2k`;
-              const imageGuuid = this.imageGuuidFromFileName(imagesData, fileName);
-              if (!imageGuuid) {
-                throw new Error('Image GUID not found for filename: ' + fileName);
-              }
-              return this.iiif(imageGuuid); // Construct the IIIF URL
-            })
-            .then(url => {
-              if (url) {
-                this.osd.addTiledImage({
-                  tileSource: url,
-                  width,
-                  x: (pi * width),
-                  success
-                });
-              } else {
-                console.log('No data from IIIF');
-              }
-            })
-            .catch(error => console.error('Error:', error));
+          const fileName = `${manuscript.toLowerCase()}${page}${numbered ? '_num' : ''}.j2k`;
+          // Construct the IIIF URL
+          var url = iiifBase + fileName + '/info.json';
+          if (url) {
+            this.osd.addTiledImage({
+              tileSource: url,
+              width,
+              x: (pi * width),
+              success
+            });
+          } else {
+            console.log('No data from IIIF');
+          }
         }
       })
     },
