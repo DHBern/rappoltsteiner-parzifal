@@ -16,9 +16,9 @@
   "dependencies": {
     "animate.css": "^3.7.2",
     "bulma": "^0.7.5",
-    "core-js": "^3.40.0",
+    "core-js": "^3.45.1",
     "csv": "^5.5.3",
-    "debug": "^4.4.0",
+    "debug": "^4.4.1",
     "del": "^4.1.1",
     "escape-html": "^1.0.3",
     "font-awesome": "^4.7.0",
@@ -44,7 +44,7 @@
     "xpath": "0.0.32"
   },
   "devDependencies": {
-    "@babel/node": "^7.26.0",
+    "@babel/node": "^7.28.0",
     "@babel/polyfill": "^7.12.1",
     "@vue/cli-plugin-babel": "^4.5.19",
     "@vue/cli-plugin-eslint": "^4.5.19",
