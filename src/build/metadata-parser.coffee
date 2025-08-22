@@ -1,7 +1,7 @@
+import("globby").then((mod) => mod.default(...args));
 assert = require "assert"
 path = require "path"
 
-globby = require "globby"
 xfs = require "fs-extra"
 
 csvParse = require "csv-parse/lib/sync"
