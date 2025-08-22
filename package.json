@@ -15,6 +15,7 @@
     "upgrade": "vue upgrade"
   },
   "dependencies": {
+    "@xmldom/xmldom": "^0.8.11",
     "animate.css": "^3.7.2",
     "bulma": "^0.7.5",
     "core-js": "^3.45.1",
@@ -42,7 +43,6 @@
     "vue-scrollto": "^2.20.0",
     "vue-waypoint": "^3.5.2",
     "xmlbuilder": "^12.0.1",
-    "xmldom": "^0.4.0",
     "xpath": "0.0.32"
   },
   "devDependencies": {
@@ -54,11 +54,11 @@
     "coffeescript": "^2.7.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
-    "node-sass": "^4.14.1",
-    "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.7.16",
     "@babel/eslint-parser": "^7.12.16",
-    "@babel/core": "^7.12.16"
+    "@babel/core": "^7.12.16",
+    "node-sass": "^8.0.0",
+    "sass-loader": "^16.0.5"
   },
   "license": "GPL v3.0",
   "repository": "git@github.com:paginagmbh/parzival.git"
