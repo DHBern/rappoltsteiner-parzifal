@@ -1,4 +1,4 @@
-const globby = import("globby").then((mod) => mod.default(...args));
+globby = require "globby"
 assert = require "assert"
 path = require "path"
 
